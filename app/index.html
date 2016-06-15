@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="ng-scope">
+    <head>
+        <title>Demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--  link rel='stylesheet' type='text/css' href="styles/bootstrap.min.css"-->
+        <link rel='stylesheet' type='text/css' href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel='stylesheet' type='text/css' href="styles/animate.css">
+        <link rel='stylesheet' type='text/css' href="styles/index.css">
+
+        <script type='text/javascript' src="scripts/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script type='text/javascript' src="https://code.angularjs.org/1.5.6/angular-animate.js"></script>
+
+    </head>
+    <body ng-app="rappiDemo" ng-controller="newsCtrl">
+		<hr>
+			<div class="container">
+			<div class="row header">
+				<div class="col-md-1 col-xs-1">
+			 		<img title="" src="images/icon-news.png" class="img-responsive left-block">
+				</div>
+				<h5 class="col-xs-5 col-md-7 col-lg-9 vcenter">{{headTitle}}</h5>
+			</div>	
+			<div class="alt">
+		    	<div class="row newsTitle" ng-repeat-start="n in news" ng-click="showDetail(n)">
+					<div class="col-md-1 col-xs-1" ng-class-even="'circleBlue'" ng-class-odd="'circleGreen'"></div>
+    	    		<h5 class="col-xs-5 col-md-7 col-lg-9 vcenter">{{n.title}}</h5>
+      			</div>
+      			<div class="row newsContent" ng-repeat-end="" ng-show="active==n.title">
+	            	<div class="col-md-2 col-xs-12 text-center">
+             			<img title="" src="{{n.image}}" class="img-thumbnail img-responsive center-block">
+            		</div>
+            		<div>
+	      				<h4> {{n.title}}</h4>
+    	        		<h5>{{n.content}}</h5>
+            		</div>
+      			</div>
+			</div>
+		</div>
+	<script type='text/javascript' src="scripts/app.js"></script>
+    </body>
+</html>
