@@ -83,14 +83,14 @@ hr {
 }
 
 /* when hiding the thing */
-.ng-hide-add { 
+.newsContent.ng-hide-add { 
 	-webkit-animation: bounceOutUp 1s;
 	animation: bounceOutUp 1s;
 
 }
 
 /* when showing the thing */
-.ng-hide-remove      { 
+.newsContent.ng-hide-remove      { 
 	-webkit-animation: bounceInDown 1s;
 	animation: bounceInDown 1s;
 }
