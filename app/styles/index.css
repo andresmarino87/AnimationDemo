@@ -95,7 +95,7 @@ hr {
 	animation: bounceInDown 1s;
 }
 
-.ng-leave {
+/*.ng-leave {
   -webkit-transition: 1s;
   transition: 1s;
   

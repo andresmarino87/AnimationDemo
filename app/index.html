@@ -10,7 +10,6 @@
         <link rel='stylesheet' type='text/css' href="styles/animate.css">
         <link rel='stylesheet' type='text/css' href="styles/index.css">
 
-        <script type='text/javascript' src="scripts/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 		<script type='text/javascript' src="https://code.angularjs.org/1.5.6/angular-animate.js"></script>
@@ -26,6 +25,9 @@
 				<h5 class="col-xs-5 col-md-7 col-lg-9 vcenter">{{headTitle}}</h5>
 			</div>	
 			<div class="alt">
+				<div id="loading">
+					<img title="" src="images/loading.gif" class="img-responsive center-block">
+				</div>
 		    	<div class="row newsTitle" ng-repeat-start="n in news" ng-click="showDetail(n)">
 					<div class="col-md-1 col-xs-1" ng-class-even="'circleBlue'" ng-class-odd="'circleGreen'"></div>
     	    		<h5 class="col-xs-5 col-md-7 col-lg-9 vcenter">{{n.title}}</h5>
